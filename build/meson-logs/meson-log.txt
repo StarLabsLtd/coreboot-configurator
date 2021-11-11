@@ -1,0 +1,394 @@
+Build started at 2021-11-10T09:40:01.362912
+Main binary: /usr/bin/python3
+Build Options: -Dprefix=/usr
+Python system: Linux
+The Meson build system
+Version: 0.56.2
+Source dir: /home/sean/Desktop/coreboot-configurator
+Build dir: /home/sean/Desktop/coreboot-configurator/build
+Build type: native build
+Project name: coreboot-configurator
+Project version: 8
+None of 'CXX' are defined in the environment, not changing global flags.
+None of 'CXXFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.cc -o /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the host machine: c++ (gcc 10.3.0 "c++ (Ubuntu 10.3.0-11ubuntu1) 10.3.0")
+C++ linker for the host machine: c++ ld.bfd 2.37
+None of 'AR' are defined in the environment, not changing global flags.
+None of 'CXX' are defined in the environment, not changing global flags.
+None of 'CXXFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.cc -o /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/sean/Desktop/coreboot-configurator/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: c++ (gcc 10.3.0 "c++ (Ubuntu 10.3.0-11ubuntu1) 10.3.0")
+C++ linker for the build machine: c++ ld.bfd 2.37
+None of 'AR' are defined in the environment, not changing global flags.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Trying to find qt with pkg-config
+Pkg-config binary for MachineChoice.HOST is not cached.
+None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (0.29.2)
+Determining dependency 'Qt5Core' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion Qt5Core` -> 0
+5.15.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags Qt5Core` -> 0
+-DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Core --libs` -> 0
+-lQt5Core
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Core --libs` -> 0
+-lQt5Core
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp9i0fnq7m
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp9i0fnq7m/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp9i0fnq7m/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lQt5Core -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'Qt5Gui' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion Qt5Gui` -> 0
+5.15.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags Qt5Gui` -> 0
+-DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Gui --libs` -> 0
+-lQt5Gui -lQt5Core
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Gui --libs` -> 0
+-lQt5Gui -lQt5Core
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp5w6t2n6m
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp5w6t2n6m/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp5w6t2n6m/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lQt5Gui -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'Qt5Widgets' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion Qt5Widgets` -> 0
+5.15.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags Qt5Widgets` -> 0
+-DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Widgets --libs` -> 0
+-lQt5Widgets -lQt5Gui -lQt5Core
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Widgets --libs` -> 0
+-lQt5Widgets -lQt5Gui -lQt5Core
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp23xvcdc5
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp23xvcdc5/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp23xvcdc5/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lQt5Widgets -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'Qt5Svg' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion Qt5Svg` -> 0
+5.15.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags Qt5Svg` -> 0
+-DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Svg --libs` -> 0
+-lQt5Svg -lQt5Widgets -lQt5Gui -lQt5Core
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config Qt5Svg --libs` -> 0
+-lQt5Svg -lQt5Widgets -lQt5Gui -lQt5Core
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp8471kyr2
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp8471kyr2/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp8471kyr2/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -lQt5Svg -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=host_bins Qt5Core` -> 0
+/usr/lib/x86_64-linux-gnu/qt5/bin
+Got pkgconfig variable host_bins : /usr/lib/x86_64-linux-gnu/qt5/bin
+Run-time dependency qt5 (modules: Core, Gui, Widgets, Svg) found: YES 5.15.2 (pkg-config)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'yaml-cpp' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion yaml-cpp` -> 0
+0.6.3
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags yaml-cpp` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config yaml-cpp --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lyaml-cpp
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config yaml-cpp --libs` -> 0
+-lyaml-cpp
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmporrfdlzn
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmporrfdlzn/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmporrfdlzn/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp0khv1lef
+Command line:  c++ /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp0khv1lef/testfile.cpp -o /home/sean/Desktop/coreboot-configurator/build/meson-private/tmp0khv1lef/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/10/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/10/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/10/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency yaml-cpp found: YES 0.6.3
+Detecting Qt5 tools
+Trying to find qt with pkg-config
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'Qt5Core' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+PKG_CONFIG_PATH: 
+Got pkgconfig variable host_bins : /usr/lib/x86_64-linux-gnu/qt5/bin
+Program /usr/lib/x86_64-linux-gnu/qt5/bin/moc found: YES 5.15.2
+ (/usr/lib/x86_64-linux-gnu/qt5/bin/moc)
+Program /usr/lib/x86_64-linux-gnu/qt5/bin/uic found: YES 5.15.2
+ (/usr/lib/x86_64-linux-gnu/qt5/bin/uic)
+Program /usr/lib/x86_64-linux-gnu/qt5/bin/rcc found: YES 5.15.2
+ (/usr/lib/x86_64-linux-gnu/qt5/bin/rcc)
+Program /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease found: YES 5.15.2
+ (/usr/lib/x86_64-linux-gnu/qt5/bin/lrelease)
+Program inkscape found: YES (/usr/bin/inkscape)
+Configuring 24.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=48 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/24.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89342): Gtk-WARNING **: 09:40:01.713: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 256 x 256 pixels (48 dpi)
+
+
+Configuring 48.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=96 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/48.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89366): Gtk-WARNING **: 09:40:01.897: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 512 x 512 pixels (96 dpi)
+
+
+Configuring 96.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=192 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/96.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89386): Gtk-WARNING **: 09:40:02.108: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 1024 x 1024 pixels (192 dpi)
+
+
+Configuring 16.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=32 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/16.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89405): Gtk-WARNING **: 09:40:02.394: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 171 x 171 pixels (32 dpi)
+
+
+Configuring 32.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=64 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/32.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89426): Gtk-WARNING **: 09:40:02.580: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 341 x 341 pixels (64 dpi)
+
+
+Configuring 64.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=128 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/64.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89445): Gtk-WARNING **: 09:40:02.769: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 683 x 683 pixels (128 dpi)
+
+
+Configuring 128.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=256 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/128.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89464): Gtk-WARNING **: 09:40:02.999: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 1365 x 1365 pixels (256 dpi)
+
+
+Configuring 256.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=512 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/256.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89483): Gtk-WARNING **: 09:40:03.367: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 2731 x 2731 pixels (512 dpi)
+
+
+Configuring 512.png with command
+Running command: /usr/bin/inkscape --shell --export-dpi=1024 --export-png=/home/sean/Desktop/coreboot-configurator/build/src/static/512.png /home/sean/Desktop/coreboot-configurator/src/static/coreboot_configurator.svg
+--- stdout ---
+Inkscape interactive shell mode. Type 'action-list' to list all actions. Type 'quit' to quit.
+ Input of the form:
+ action1:arg1; action2:arg2; verb1; verb2; ...
+Only verbs that don't require a desktop may be used.
+> 
+--- stderr ---
+Warning: Option --export-png= is deprecated
+
+(inkscape:89504): Gtk-WARNING **: 09:40:04.412: Theme parsing error: gtk.css:6468:37: 'activated-overlay' is not a valid color name
+Background RRGGBBAA: ffffff00
+Area 0:0:512:512 exported to 5461 x 5461 pixels (1024 dpi)
+
+
+Build targets in project: 2
+
+Found ninja-1.10.1 at /usr/bin/ninja
+None of 'STRIP' are defined in the environment, not changing global flags.
+None of 'STRIP' are defined in the environment, not changing global flags.

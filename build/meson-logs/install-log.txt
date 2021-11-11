@@ -1,0 +1,16 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+/usr/sbin/coreboot-configurator
+/usr/share/coreboot-configurator/aboutIcon.png
+/usr/share/polkit-1/actions/org.coreboot.nvramtool.policy
+/usr/share/polkit-1/actions/org.coreboot.reboot.policy
+/usr/share/applications/coreboot-configurator.desktop
+/usr/share/icons/hicolor/24x24/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/48x48/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/96x96/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/16x16/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/32x32/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/64x64/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/128x128/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/256x256/apps/coreboot-configurator.png
+/usr/share/icons/hicolor/512x512/apps/coreboot-configurator.png

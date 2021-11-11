@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o -MF src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o.d -o src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o -c src/application/qt5-images_qrc.cpp",
+    "file": "src/application/qt5-images_qrc.cpp",
+    "output": "src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o -MF src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o.d -o src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o -c src/application/coreboot-configurator.p/moc_aboutwindow.cpp",
+    "file": "src/application/coreboot-configurator.p/moc_aboutwindow.cpp",
+    "output": "src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o -MF src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o.d -o src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o -c src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp",
+    "file": "src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp",
+    "output": "src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o -MF src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o.d -o src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o -c src/application/coreboot-configurator.p/moc_configuration.cpp",
+    "file": "src/application/coreboot-configurator.p/moc_configuration.cpp",
+    "output": "src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o -MF src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o.d -o src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o -c src/application/coreboot-configurator.p/moc_toggleswitch.cpp",
+    "file": "src/application/coreboot-configurator.p/moc_toggleswitch.cpp",
+    "output": "src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/aboutwindow.cpp.o -MF src/application/coreboot-configurator.p/aboutwindow.cpp.o.d -o src/application/coreboot-configurator.p/aboutwindow.cpp.o -c ../src/application/aboutwindow.cpp",
+    "file": "../src/application/aboutwindow.cpp",
+    "output": "src/application/coreboot-configurator.p/aboutwindow.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/corebootconfigurator.cpp.o -MF src/application/coreboot-configurator.p/corebootconfigurator.cpp.o.d -o src/application/coreboot-configurator.p/corebootconfigurator.cpp.o -c ../src/application/corebootconfigurator.cpp",
+    "file": "../src/application/corebootconfigurator.cpp",
+    "output": "src/application/coreboot-configurator.p/corebootconfigurator.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/main.cpp.o -MF src/application/coreboot-configurator.p/main.cpp.o.d -o src/application/coreboot-configurator.p/main.cpp.o -c ../src/application/main.cpp",
+    "file": "../src/application/main.cpp",
+    "output": "src/application/coreboot-configurator.p/main.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/configuration.cpp.o -MF src/application/coreboot-configurator.p/configuration.cpp.o.d -o src/application/coreboot-configurator.p/configuration.cpp.o -c ../src/application/configuration.cpp",
+    "file": "../src/application/configuration.cpp",
+    "output": "src/application/coreboot-configurator.p/configuration.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/toggleswitch.cpp.o -MF src/application/coreboot-configurator.p/toggleswitch.cpp.o.d -o src/application/coreboot-configurator.p/toggleswitch.cpp.o -c ../src/application/toggleswitch.cpp",
+    "file": "../src/application/toggleswitch.cpp",
+    "output": "src/application/coreboot-configurator.p/toggleswitch.cpp.o"
+  },
+  {
+    "directory": "/home/sean/Desktop/coreboot-configurator/build",
+    "command": "c++ -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11 -MD -MQ src/application/coreboot-configurator.p/nvramtoolcli.cpp.o -MF src/application/coreboot-configurator.p/nvramtoolcli.cpp.o.d -o src/application/coreboot-configurator.p/nvramtoolcli.cpp.o -c ../src/application/nvramtoolcli.cpp",
+    "file": "../src/application/nvramtoolcli.cpp",
+    "output": "src/application/coreboot-configurator.p/nvramtoolcli.cpp.o"
+  }
+]

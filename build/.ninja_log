@@ -1,0 +1,14 @@
+# ninja log v5
+1	4	1636537220691476854	src/application/coreboot-configurator.p/moc_aboutwindow.cpp	bd14f82d919f898a
+1	4	1636537220691476854	src/application/coreboot-configurator.p/moc_configuration.cpp	5598a850634139b2
+0	5	1636537220695476851	src/application/qt5-images_qrc.cpp	c5c0cb268144f509
+1	5	1636537220695476851	src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp	57c67a7f3d2dcc0d
+1	5	1636537220695476851	src/application/coreboot-configurator.p/moc_toggleswitch.cpp	f10090c640114a6d
+0	10	1636537220699476847	src/application/coreboot-configurator.p/ui_aboutwindow.h	b6496cbaccb8240c
+0	11	1636537220699476847	src/application/coreboot-configurator.p/ui_corebootconfigurator.h	7a8ee312be134520
+12	28	1636537220715476834	src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o	fa3b8b1944d9b8c7
+11	48	1636537220735476817	src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o	5da3d190a6ad4d38
+11	1417	1636537222103475663	src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o	306df08da0d59094
+12	1449	1636537222135475636	src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o	d9667e283f478e29
+12	1650	1636537222335475468	src/application/coreboot-configurator.p/aboutwindow.cpp.o	95b0665785a497c0
+15	1809	1636537222495475333	src/application/coreboot-configurator.p/toggleswitch.cpp.o	e65b577d675c85f
