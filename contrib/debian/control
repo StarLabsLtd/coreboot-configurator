@@ -2,7 +2,7 @@ Source: coreboot-configurator
 Section: utils
 Priority: optional
 Maintainer: Star Labs <admin@starlabs.systems>
-Build-Depends: debhelper (>= 7), build-essential, cmake, qtbase5-dev, inkscape, meson
+Build-Depends: debhelper (>= 7), build-essential, cmake,  inkscape, meson, qtbase5-dev, libyaml-cpp-dev, libqt5svg5-dev
 Standards-Version: 4.1.1
 
 Package: coreboot-configurator
