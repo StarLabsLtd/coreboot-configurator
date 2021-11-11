@@ -270,7 +270,7 @@ void MainWindow::generateUi()
                 labelWithTooltip->setLayout(new QHBoxLayout);
                 
                 auto helpButton = new QLabel();
-                helpButton->setPixmap(QIcon::fromTheme("help-hint").pixmap(24,24));
+                helpButton->setPixmap(QIcon::fromTheme("help-hint").pixmap(16,16));
                 
                 {
                     auto layout = qobject_cast<QHBoxLayout*>(labelWithTooltip->layout());
