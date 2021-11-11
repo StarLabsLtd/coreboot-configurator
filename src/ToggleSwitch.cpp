@@ -30,11 +30,11 @@ ToggleSwitch::ToggleSwitch(QWidget *parent) : QCheckBox(parent){
 
 void ToggleSwitch::paintEvent(QPaintEvent *event){
     QPainter p(this);
-    
+
     if(isChecked()){
         auto accent = palette().highlight().color();
         m_toggleOnSvgContentColored = m_toggleOnSvgContentColored.replace(s_colorPosInToggleOn, 7, accent.name().toLatin1());
-        
+
         m_svgr.load(m_toggleOnSvgContentColored);
     } else {
         m_svgr.load(s_toggleOffSvgContent);

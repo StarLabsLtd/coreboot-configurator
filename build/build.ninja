@@ -33,7 +33,7 @@ rule CUSTOM_COMMAND_DEP
  restat = 1
 
 rule REGENERATE_BUILD
- command = /usr/bin/meson --internal regenerate /home/sean/Desktop/coreboot-configurator /home/sean/Desktop/coreboot-configurator/build --backend ninja
+ command = /usr/bin/meson --internal regenerate /home/sean/Documents/coreboot-configurator /home/sean/Documents/coreboot-configurator/build --backend ninja
  description = Regenerating build files.
  generator = 1
 
@@ -43,93 +43,95 @@ build PHONY: phony
 
 # Build rules for targets
 
-build src/application/qt5-images_qrc.cpp: CUSTOM_COMMAND_DEP ../src/application/images.qrc | /usr/lib/x86_64-linux-gnu/qt5/bin/rcc /home/sean/Desktop/coreboot-configurator/src/application/toggle-off.svg /home/sean/Desktop/coreboot-configurator/src/application/toggle-on.svg
- DEPFILE = src/application/qt5-images_qrc.d
- DEPFILE_UNQUOTED = src/application/qt5-images_qrc.d
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name images -o src/application/qt5-images_qrc.cpp ../src/application/images.qrc --depfile src/application/qt5-images_qrc.d
- description = Generating$ qt5-images_qrc$ with$ a$ custom$ command
+build src/qt5-lang_qrc.cpp: CUSTOM_COMMAND_DEP src/lang.qrc | /usr/lib/x86_64-linux-gnu/qt5/bin/rcc
+ DEPFILE = src/qt5-lang_qrc.d
+ DEPFILE_UNQUOTED = src/qt5-lang_qrc.d
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name lang -o src/qt5-lang_qrc.cpp src/lang.qrc --depfile src/qt5-lang_qrc.d
+ description = Generating$ qt5-lang_qrc$ with$ a$ custom$ command
 
-build src/application/coreboot-configurator.p/ui_aboutwindow.h: CUSTOM_COMMAND ../src/application/aboutwindow.ui | /usr/lib/x86_64-linux-gnu/qt5/bin/uic
- DESC = Generating$ 'src/application/coreboot-configurator.p/ui_aboutwindow.h'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/uic -o src/application/coreboot-configurator.p/ui_aboutwindow.h ../src/application/aboutwindow.ui
+build src/qt5-resources_qrc.cpp: CUSTOM_COMMAND_DEP ../src/resources.qrc | /usr/lib/x86_64-linux-gnu/qt5/bin/rcc /home/sean/Documents/coreboot-configurator/src/toggle-off.svg /home/sean/Documents/coreboot-configurator/src/toggle-on.svg
+ DEPFILE = src/qt5-resources_qrc.d
+ DEPFILE_UNQUOTED = src/qt5-resources_qrc.d
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name resources -o src/qt5-resources_qrc.cpp ../src/resources.qrc --depfile src/qt5-resources_qrc.d
+ description = Generating$ qt5-resources_qrc$ with$ a$ custom$ command
 
-build src/application/coreboot-configurator.p/ui_corebootconfigurator.h: CUSTOM_COMMAND ../src/application/corebootconfigurator.ui | /usr/lib/x86_64-linux-gnu/qt5/bin/uic
- DESC = Generating$ 'src/application/coreboot-configurator.p/ui_corebootconfigurator.h'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/uic -o src/application/coreboot-configurator.p/ui_corebootconfigurator.h ../src/application/corebootconfigurator.ui
+build src/coreboot-configurator.p/ui_MainWindow.h: CUSTOM_COMMAND ../src/MainWindow.ui | /usr/lib/x86_64-linux-gnu/qt5/bin/uic
+ DESC = Generating$ 'src/coreboot-configurator.p/ui_MainWindow.h'.
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/uic -o src/coreboot-configurator.p/ui_MainWindow.h ../src/MainWindow.ui
 
-build src/application/coreboot-configurator.p/moc_aboutwindow.cpp: CUSTOM_COMMAND ../src/application/aboutwindow.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
- DESC = Generating$ 'src/application/coreboot-configurator.p/moc_aboutwindow.cpp'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc ../src/application/aboutwindow.h -o src/application/coreboot-configurator.p/moc_aboutwindow.cpp
+build src/coreboot-configurator.p/ui_AboutDialog.h: CUSTOM_COMMAND ../src/AboutDialog.ui | /usr/lib/x86_64-linux-gnu/qt5/bin/uic
+ DESC = Generating$ 'src/coreboot-configurator.p/ui_AboutDialog.h'.
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/uic -o src/coreboot-configurator.p/ui_AboutDialog.h ../src/AboutDialog.ui
 
-build src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp: CUSTOM_COMMAND ../src/application/corebootconfigurator.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
- DESC = Generating$ 'src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc ../src/application/corebootconfigurator.h -o src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp
+build src/coreboot-configurator.p/moc_MainWindow.cpp: CUSTOM_COMMAND ../src/MainWindow.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+ DESC = Generating$ 'src/coreboot-configurator.p/moc_MainWindow.cpp'.
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 ../src/MainWindow.h -o src/coreboot-configurator.p/moc_MainWindow.cpp
 
-build src/application/coreboot-configurator.p/moc_configuration.cpp: CUSTOM_COMMAND ../src/application/configuration.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
- DESC = Generating$ 'src/application/coreboot-configurator.p/moc_configuration.cpp'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc ../src/application/configuration.h -o src/application/coreboot-configurator.p/moc_configuration.cpp
+build src/coreboot-configurator.p/moc_AboutDialog.cpp: CUSTOM_COMMAND ../src/AboutDialog.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+ DESC = Generating$ 'src/coreboot-configurator.p/moc_AboutDialog.cpp'.
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 ../src/AboutDialog.h -o src/coreboot-configurator.p/moc_AboutDialog.cpp
 
-build src/application/coreboot-configurator.p/moc_toggleswitch.cpp: CUSTOM_COMMAND ../src/application/toggleswitch.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
- DESC = Generating$ 'src/application/coreboot-configurator.p/moc_toggleswitch.cpp'.
- COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc ../src/application/toggleswitch.h -o src/application/coreboot-configurator.p/moc_toggleswitch.cpp
+build src/coreboot-configurator.p/moc_ToggleSwitch.cpp: CUSTOM_COMMAND ../src/ToggleSwitch.h | /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+ DESC = Generating$ 'src/coreboot-configurator.p/moc_ToggleSwitch.cpp'.
+ COMMAND = /usr/lib/x86_64-linux-gnu/qt5/bin/moc -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 ../src/ToggleSwitch.h -o src/coreboot-configurator.p/moc_ToggleSwitch.cpp
 
-build src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o: cpp_COMPILER src/application/qt5-images_qrc.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/meson-generated_.._qt5-lang_qrc.cpp.o: cpp_COMPILER src/qt5-lang_qrc.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/meson-generated_.._qt5-lang_qrc.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/meson-generated_.._qt5-lang_qrc.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o: cpp_COMPILER src/application/coreboot-configurator.p/moc_aboutwindow.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/meson-generated_.._qt5-resources_qrc.cpp.o: cpp_COMPILER src/qt5-resources_qrc.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/meson-generated_.._qt5-resources_qrc.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/meson-generated_.._qt5-resources_qrc.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o: cpp_COMPILER src/application/coreboot-configurator.p/moc_corebootconfigurator.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/meson-generated_moc_MainWindow.cpp.o: cpp_COMPILER src/coreboot-configurator.p/moc_MainWindow.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/meson-generated_moc_MainWindow.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/meson-generated_moc_MainWindow.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o: cpp_COMPILER src/application/coreboot-configurator.p/moc_configuration.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/meson-generated_moc_AboutDialog.cpp.o: cpp_COMPILER src/coreboot-configurator.p/moc_AboutDialog.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/meson-generated_moc_AboutDialog.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/meson-generated_moc_AboutDialog.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o: cpp_COMPILER src/application/coreboot-configurator.p/moc_toggleswitch.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/meson-generated_moc_ToggleSwitch.cpp.o: cpp_COMPILER src/coreboot-configurator.p/moc_ToggleSwitch.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/meson-generated_moc_ToggleSwitch.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/meson-generated_moc_ToggleSwitch.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/aboutwindow.cpp.o: cpp_COMPILER ../src/application/aboutwindow.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/aboutwindow.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/aboutwindow.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/main.cpp.o: cpp_COMPILER ../src/main.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/main.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/main.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/corebootconfigurator.cpp.o: cpp_COMPILER ../src/application/corebootconfigurator.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/corebootconfigurator.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/corebootconfigurator.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/MainWindow.cpp.o: cpp_COMPILER ../src/MainWindow.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/MainWindow.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/MainWindow.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/main.cpp.o: cpp_COMPILER ../src/application/main.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/main.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/main.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/AboutDialog.cpp.o: cpp_COMPILER ../src/AboutDialog.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/AboutDialog.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/AboutDialog.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/configuration.cpp.o: cpp_COMPILER ../src/application/configuration.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/configuration.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/configuration.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/Configuration.cpp.o: cpp_COMPILER ../src/Configuration.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/Configuration.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/Configuration.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/toggleswitch.cpp.o: cpp_COMPILER ../src/application/toggleswitch.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/toggleswitch.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/toggleswitch.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/ToggleSwitch.cpp.o: cpp_COMPILER ../src/ToggleSwitch.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/ToggleSwitch.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/ToggleSwitch.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator.p/nvramtoolcli.cpp.o: cpp_COMPILER ../src/application/nvramtoolcli.cpp || src/application/coreboot-configurator.p/ui_aboutwindow.h src/application/coreboot-configurator.p/ui_corebootconfigurator.h
- DEPFILE = src/application/coreboot-configurator.p/nvramtoolcli.cpp.o.d
- DEPFILE_UNQUOTED = src/application/coreboot-configurator.p/nvramtoolcli.cpp.o.d
- ARGS = -Isrc/application/coreboot-configurator.p -Isrc/application -I../src/application -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC -std=c++11
+build src/coreboot-configurator.p/NvramToolCli.cpp.o: cpp_COMPILER ../src/NvramToolCli.cpp || src/coreboot-configurator.p/ui_MainWindow.h src/coreboot-configurator.p/ui_AboutDialog.h
+ DEPFILE = src/coreboot-configurator.p/NvramToolCli.cpp.o.d
+ DEPFILE_UNQUOTED = src/coreboot-configurator.p/NvramToolCli.cpp.o.d
+ ARGS = -Isrc/coreboot-configurator.p -Isrc -I../src -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtSvg -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
-build src/application/coreboot-configurator: cpp_LINKER src/application/coreboot-configurator.p/meson-generated_.._qt5-images_qrc.cpp.o src/application/coreboot-configurator.p/meson-generated_moc_aboutwindow.cpp.o src/application/coreboot-configurator.p/meson-generated_moc_corebootconfigurator.cpp.o src/application/coreboot-configurator.p/meson-generated_moc_configuration.cpp.o src/application/coreboot-configurator.p/meson-generated_moc_toggleswitch.cpp.o src/application/coreboot-configurator.p/aboutwindow.cpp.o src/application/coreboot-configurator.p/corebootconfigurator.cpp.o src/application/coreboot-configurator.p/main.cpp.o src/application/coreboot-configurator.p/configuration.cpp.o src/application/coreboot-configurator.p/toggleswitch.cpp.o src/application/coreboot-configurator.p/nvramtoolcli.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Svg.so.5.15.2 /usr/lib/x86_64-linux-gnu/libyaml-cpp.so
- LINK_ARGS = -Wl,--as-needed -Wl,--no-undefined -Wl,--start-group -lQt5Core -lQt5Gui -lQt5Core -lQt5Widgets -lQt5Gui -lQt5Core -lQt5Svg -lQt5Widgets -lQt5Gui -lQt5Core /usr/lib/x86_64-linux-gnu/libyaml-cpp.so -Wl,--end-group
+build src/coreboot-configurator: cpp_LINKER src/coreboot-configurator.p/meson-generated_.._qt5-lang_qrc.cpp.o src/coreboot-configurator.p/meson-generated_.._qt5-resources_qrc.cpp.o src/coreboot-configurator.p/meson-generated_moc_MainWindow.cpp.o src/coreboot-configurator.p/meson-generated_moc_AboutDialog.cpp.o src/coreboot-configurator.p/meson-generated_moc_ToggleSwitch.cpp.o src/coreboot-configurator.p/main.cpp.o src/coreboot-configurator.p/MainWindow.cpp.o src/coreboot-configurator.p/AboutDialog.cpp.o src/coreboot-configurator.p/Configuration.cpp.o src/coreboot-configurator.p/ToggleSwitch.cpp.o src/coreboot-configurator.p/NvramToolCli.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.2 /usr/lib/x86_64-linux-gnu/libQt5Svg.so.5.15.2 /usr/lib/x86_64-linux-gnu/libyaml-cpp.so
+ LINK_ARGS = -Wl,--as-needed -Wl,--no-undefined -Wl,--start-group -lQt5Core -lQt5Widgets -lQt5Gui -lQt5Core -lQt5Svg -lQt5Widgets -lQt5Gui -lQt5Core /usr/lib/x86_64-linux-gnu/libyaml-cpp.so -Wl,--end-group
 
 # Test rules
 
@@ -166,19 +168,19 @@ build dist: phony meson-dist
 # Suffix
 
 build meson-scan-build: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal scanbuild /home/sean/Desktop/coreboot-configurator /home/sean/Desktop/coreboot-configurator/build /usr/bin/meson -Dmock=false '-Dsizes=['"'"'24'"'"',$ '"'"'48'"'"',$ '"'"'96'"'"',$ '"'"'16'"'"',$ '"'"'32'"'"',$ '"'"'64'"'"',$ '"'"'128'"'"',$ '"'"'256'"'"',$ '"'"'512'"'"']'
+ COMMAND = /usr/bin/meson --internal scanbuild /home/sean/Documents/coreboot-configurator /home/sean/Documents/coreboot-configurator/build /usr/bin/meson -Dmock=false '-Dsizes=['"'"'24'"'"',$ '"'"'48'"'"',$ '"'"'96'"'"',$ '"'"'16'"'"',$ '"'"'32'"'"',$ '"'"'64'"'"',$ '"'"'128'"'"',$ '"'"'256'"'"',$ '"'"'512'"'"']'
  pool = console
 
 build scan-build: phony meson-scan-build
 
 build meson-TAGS: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal tags etags /home/sean/Desktop/coreboot-configurator
+ COMMAND = /usr/bin/meson --internal tags etags /home/sean/Documents/coreboot-configurator
  pool = console
 
 build TAGS: phony meson-TAGS
 
 build meson-ctags: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal tags ctags /home/sean/Desktop/coreboot-configurator
+ COMMAND = /usr/bin/meson --internal tags ctags /home/sean/Documents/coreboot-configurator
  pool = console
 
 build ctags: phony meson-ctags
@@ -189,12 +191,12 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony src/application/coreboot-configurator
+build all: phony src/coreboot-configurator
 
 build clean: phony meson-clean
 
 build meson-clean-ctlist: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal cleantrees /home/sean/Desktop/coreboot-configurator/build/meson-private/cleantrees.dat
+ COMMAND = /usr/bin/meson --internal cleantrees /home/sean/Documents/coreboot-configurator/build/meson-private/cleantrees.dat
  description = Cleaning$ custom$ target$ directories
 
 build clean-ctlist: phony meson-clean-ctlist
@@ -203,13 +205,13 @@ build meson-clean: CUSTOM_COMMAND PHONY | clean-ctlist
  COMMAND = /usr/bin/ninja -t clean
  description = Cleaning
 
-build build.ninja: REGENERATE_BUILD ../meson.build ../meson_options.txt ../src/meson.build ../src/application/meson.build ../src/static/meson.build ../src/static/coreboot_configurator.svg /usr/bin/inkscape meson-private/coredata.dat
+build build.ninja: REGENERATE_BUILD ../meson.build ../meson_options.txt ../src/meson.build ../src/lang.qrc ../resources/meson.build ../resources/coreboot_configurator.svg /usr/bin/inkscape meson-private/coredata.dat
  pool = console
 
 build reconfigure: REGENERATE_BUILD PHONY
  pool = console
 
-build ../meson.build ../meson_options.txt ../src/meson.build ../src/application/meson.build ../src/static/meson.build ../src/static/coreboot_configurator.svg /usr/bin/inkscape meson-private/coredata.dat: phony 
+build ../meson.build ../meson_options.txt ../src/meson.build ../src/lang.qrc ../resources/meson.build ../resources/coreboot_configurator.svg /usr/bin/inkscape meson-private/coredata.dat: phony 
 
 default all
 

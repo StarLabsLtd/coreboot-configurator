@@ -31,7 +31,7 @@ QMap<QString, QString> NvramToolCli::readParameters(QString *error) {
             {"trackpad_state","0x40"},
             {"kbl_brightness","0xc4"},
             {"kbl_state","0x22"}
-    
+
         });
 }
 
@@ -48,39 +48,39 @@ QMap<QString, QString> NvramToolCli::readParameters(QString *error)
 {
     QProcess nvramtoolProcess;
     nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-a"});
-    
+
     nvramtoolProcess.waitForFinished();
-    
-    if(error) *error = nvramtoolProcess.readAllStandardError();    
-    
+
+    if(error) *error = nvramtoolProcess.readAllStandardError();
+
     if(nvramtoolProcess.exitCode() != 0){
         return {};
     }
-    
+
     return Util::parseParameters(nvramtoolProcess);
 }
 
 QStringList NvramToolCli::readOptions(const QString &parameter, QString *error)
 {
     QStringList result;
-    
+
     QProcess nvramtoolProcess;
     nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-e", parameter});
     nvramtoolProcess.waitForFinished();
-    
-    if(error) *error = nvramtoolProcess.readAllStandardError();    
-    
+
+    if(error) *error = nvramtoolProcess.readAllStandardError();
+
     while (nvramtoolProcess.canReadLine()) {
         result.append(nvramtoolProcess.readLine().trimmed());
     }
-    
+
     return result;
 }
 #endif
 
 bool NvramToolCli::writeParameters(const QMap<QString, QString> &parameters, QString *error)
 {
-   
+
 #if MOCK
     QTextStream outStream(stdout);
 #else
@@ -92,19 +92,18 @@ bool NvramToolCli::writeParameters(const QMap<QString, QString> &parameters, QSt
     for(auto it = parameters.begin(); it != parameters.end(); ++it){
         outStream << it.key() << " = " << it.value() << "\n";
     }
-    
+
     outStream.flush();
 #if MOCK
     return true;
 #else
     nvramtoolProcess.closeWriteChannel();
     nvramtoolProcess.waitForFinished();
-    
-    
+
     if(error){
         *error = nvramtoolProcess.readAllStandardError();
     }
-    
+
     return nvramtoolProcess.exitCode()==0;
 #endif
 }
@@ -115,8 +114,8 @@ QString NvramToolCli::version()
 {
     QProcess nvramtoolProcess;
     nvramtoolProcess.start(s_nvramToolProg, {"-v"});
-    
+
     nvramtoolProcess.waitForFinished();
-    
+
     return nvramtoolProcess.readAll();
 }

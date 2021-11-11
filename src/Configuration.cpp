@@ -17,7 +17,7 @@ QMap<QString, QString> Configuration::fromFile(const QString &curr_path)
         || curr_file.atEnd()) {
         return {};
     }
-    
+
     auto result = Util::parseParameters(curr_file);
 
     curr_file.close();
@@ -28,7 +28,7 @@ QMap<QString, QString> Configuration::fromFile(const QString &curr_path)
 bool Configuration::toFile(const QString &curr_path, const Parameters &params)
 {
     QFile output(curr_path);
-    
+
     if(!output.open(QFile::WriteOnly|QFile::Truncate)){
         return false;
     }
@@ -36,7 +36,7 @@ bool Configuration::toFile(const QString &curr_path, const Parameters &params)
     for(auto it = params.begin(); it != params.end(); ++it){
         outStream << it.key() << " = " << it.value() << "\n";
     }
-    
+
     output.close();
     return true;
 }

@@ -9,9 +9,9 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
-    
+
     ui->logoLabel->setPixmap(QPixmap(":/images/starlabs-logo.webp"));
-    
+
     ui->versionLabel->setText("<tt>"+NvramToolCli::version()+"</tt>");
 }
 
