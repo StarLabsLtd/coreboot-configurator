@@ -7,6 +7,6 @@
         <file>categories.yaml</file>
     </qresource>
     <qresource prefix="/images">
-        <file>starlabs-logo.webp</file>
+        <file>starlabs-logo.png</file>
     </qresource>
 </RCC>
