@@ -1,14 +1,5 @@
 ## SPDX-License-Identifier: GPL-2.0-only
 
-# About Icon
-about_icon_dir = join_paths(get_option('datadir'), meson.project_name())
-about_icon_sources = [
-	'aboutIcon.png',
-]
-
-install_data(about_icon_sources,
-	     install_dir: about_icon_dir)
-
 # Polkit Files
 polkit_dir = join_paths(get_option('datadir'), 'polkit-1', 'actions')
 polkit_sources = [

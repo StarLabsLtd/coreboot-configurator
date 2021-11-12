@@ -1,8 +1,8 @@
-# coreboot-configurator ![alt text](https://cdn.shopify.com/s/files/1/2059/5897/files/Star_50x.png?v=1513954416 "Star Labs Systems")
+# coreboot-configurator ![alt text](images/StarLabs_Logo.png "Star Labs Systems")
 
 A simple GUI to change settings in coreboot's CBFS, via the nvramtool utility.
 
-![coreboot-configurator](screenshots/coreboot-configurator.gif)
+![coreboot-configurator](images/coreboot-configurator.gif)
 # How to install
 ## Ubuntu, Linux Mint, elementary OS, Zorin OS and other derivates
 ##### Install

@@ -1,9 +1,8 @@
 ## SPDX-License-Identifier: GPL-2.0-only
 
-project(
-	'coreboot-configurator',
+project('coreboot-configurator',
 	'cpp',
-	version: '1',
+	version: '8',
 	license: ['GPL2', 'CC BY-SA 4.0'],
 	meson_version: '>= 0.56.0',
 	default_options: ['prefix=/usr', 
@@ -11,4 +10,3 @@ project(
 )
 
 subdir('src')
-subdir('resources')
