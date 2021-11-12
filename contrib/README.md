@@ -1,5 +1,4 @@
-# Distribution Packages ![alt text](https://cdn.shopify.com/s/files/1/2059/5897/files/Star_50x.png?v=1513954416 "Star Labs Systems")
-
+# Distribution Packages ![alt text](images/StarLabs_Logo.png "Star Labs Systems")
 The relevant packaging necessary to generate DEB, flatpak and PKG distribution packages is contained here. The generated packages can be used on a distribution such as Fedora, Debian, Ubuntu or Manjaro.
 
 # DEB packages
