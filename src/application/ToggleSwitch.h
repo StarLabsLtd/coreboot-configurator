@@ -6,9 +6,9 @@
 #include <QSvgRenderer>
 #include <QFile>
 
-///
-/// \brief The ToggleSwitch class represents Toggle Switch widget based on QCheckBox and toggles svg with colorscheme support
-///
+/*
+ * The ToggleSwitch class represents Toggle Switch widget based on QCheckBox and toggles svg with colorscheme support
+ */
 class ToggleSwitch : public QCheckBox {
     Q_OBJECT
 public:
@@ -23,15 +23,15 @@ private:
 
     QByteArray m_toggleOnSvgContentColored;
 
-    // QWidget interface
+    /* QWidget interface */
 protected:
     void paintEvent(QPaintEvent *event) override;
 
-    // QAbstractButton interface
+    /* QAbstractButton interface */
 protected:
     bool hitButton(const QPoint &pos) const override
     {
-        //needs to be clickable on
+        /* needs to be clickable on */
         return rect().contains(pos);
     }
 

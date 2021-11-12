@@ -7,9 +7,9 @@
 
 #include "Configuration.h"
 
-///
-/// Namespace for convinient functions to work with nvramtool CLI utility
-///
+/*
+ * Namespace for convinient functions to work with nvramtool CLI utility
+ */
 namespace NvramToolCli {
 
 Configuration::Parameters readParameters(QString* error = nullptr);

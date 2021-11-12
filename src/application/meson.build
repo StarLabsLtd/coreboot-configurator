@@ -15,7 +15,7 @@ generated_files = qt5.preprocess(
 )
 
 mock = get_option('mock')
-                            
+
 if mock
 	add_project_arguments('-DMOCK', language : 'cpp')
 endif

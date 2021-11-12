@@ -93,7 +93,7 @@ void MainWindow::pullSettings()
     if(m_parameters.isEmpty()){
         QMessageBox::critical(this, s_errorWindowTitle, makeNvramErrorMessage(error));
 
-        // we need delayed close as initialization error happened before event loop start so we can't stop application properly
+        /* we need delayed close as initialization error happened before event loop start so we can't stop application properly */
         QTimer::singleShot(0, this, &MainWindow::close);
     }
 }
@@ -173,7 +173,7 @@ QCheckBox* MainWindow::createCheckBox(const QString& key) {
 
 QTableWidget *MainWindow::createRawTable()
 {
-    // Create Raw values table
+    /* Create Raw values table */
     auto table = new QTableWidget(m_parameters.size(), 2);
     table->setHorizontalHeaderLabels({tr("Key"), tr("Value")});
     table->horizontalHeader()->setSectionResizeMode(0,QHeaderView::Stretch);
@@ -182,14 +182,14 @@ QTableWidget *MainWindow::createRawTable()
 
     connect(table, &QTableWidget::cellChanged, this, [table, this](int row, int column){
         if(column != 1 || row >= table->rowCount() || row < 0 ){
-            // Weird state when changed cell is not a value cell
+            /* Weird state when changed cell is not a value cell */
             return;
         }
         auto keyItem = table->item(row, 0);
         auto valueItem = table->item(row, 1);
 
         if(keyItem == nullptr || valueItem == nullptr){
-            // Invalid cells
+            /* Invalid cells */
             return;
         }
 
