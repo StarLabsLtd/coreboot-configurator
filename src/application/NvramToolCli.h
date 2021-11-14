@@ -1,9 +1,10 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
+#include <QList>
 #include <QMap>
 #include <QString>
-#include <QList>
 
 #include "Configuration.h"
 

@@ -1,8 +1,9 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#include "MainWindow.h"
 
 #include <QApplication>
 #include <QTranslator>
+
+#include "MainWindow.h"
 
 int main(int argc, char *argv[])
 {

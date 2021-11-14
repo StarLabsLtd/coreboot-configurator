@@ -1,10 +1,12 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
-#include <QObject>
 #include <QCheckBox>
-#include <QSvgRenderer>
 #include <QFile>
+#include <QObject>
+#include <QSvgRenderer>
+
 
 /*
  * The ToggleSwitch class represents Toggle Switch widget based on QCheckBox and toggles svg with colorscheme support

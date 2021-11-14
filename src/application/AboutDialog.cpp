@@ -1,8 +1,8 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#include "AboutDialog.h"
-#include "ui_AboutDialog.h"
 
+#include "AboutDialog.h"
 #include "NvramToolCli.h"
+#include "ui_AboutDialog.h"
 
 AboutDialog::AboutDialog(QWidget *parent) :
     QDialog(parent),

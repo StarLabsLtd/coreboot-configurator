@@ -1,10 +1,10 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#include "Configuration.h"
 
 #include <QFile>
 #include <QString>
 #include <QTextStream>
 
+#include "Configuration.h"
 #include "Util.h"
 
 QMap<QString, QString> Configuration::fromFile(const QString &curr_path)

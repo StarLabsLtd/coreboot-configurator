@@ -1,8 +1,10 @@
+/* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
+#include <QIODevice>
 #include <QMap>
 #include <QString>
-#include <QIODevice>
 
 namespace Util {
 

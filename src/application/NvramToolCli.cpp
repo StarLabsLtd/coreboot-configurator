@@ -1,9 +1,9 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#include "NvramToolCli.h"
 
 #include <QProcess>
 #include <QTextStream>
 
+#include "NvramToolCli.h"
 #include "Util.h"
 
 static constexpr char s_sudoProg[] = "/usr/bin/pkexec";

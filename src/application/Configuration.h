@@ -1,10 +1,12 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
-#include <QObject>
-#include <QMap>
-#include <QString>
 #include <QFile>
+#include <QMap>
+#include <QObject>
+#include <QString>
+
 
 namespace Configuration {
 

@@ -1,15 +1,14 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
-#include <QMainWindow>
-#include <QTableWidget>
-#include <QString>
+#include <Configuration.h>
 #include <QCheckBox>
 #include <QComboBox>
-
+#include <QMainWindow>
+#include <QString>
+#include <QTableWidget>
 #include <yaml-cpp/yaml.h>
-
-#include <Configuration.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

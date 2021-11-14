@@ -1,11 +1,12 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
-#include "ToggleSwitch.h"
 
-#include <QPalette>
-#include <QPainter>
 #include <QEvent>
-#include <QTimer>
 #include <QGuiApplication>
+#include <QPainter>
+#include <QPalette>
+#include <QTimer>
+
+#include "ToggleSwitch.h"
 
 static inline QByteArray readSvg(const QString& name){
     QFile svgFile(name);

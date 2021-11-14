@@ -1,17 +1,18 @@
-#include "MainWindow.h"
-#include "ui_MainWindow.h"
+/* SPDX-License-Identifier: GPL-2.0-only */
 
-#include <QMessageBox>
 #include <QFileDialog>
-#include <QtGui>
-#include <QLabel>
 #include <QHeaderView>
+#include <QLabel>
+#include <QMessageBox>
 #include <QShortcut>
+#include <QtWidgets>
 
 #include "AboutDialog.h"
-#include "NvramToolCli.h"
 #include "Configuration.h"
+#include "MainWindow.h"
+#include "NvramToolCli.h"
 #include "ToggleSwitch.h"
+#include "ui_MainWindow.h"
 
 static auto s_errorWindowTitle = MainWindow::tr("Error Occured");
 static auto s_nvramErrorMessage = MainWindow::tr("Nvramtool was not able to access cmos settings. Look at documentation for possible causes of errors.");
