@@ -19,4 +19,3 @@ public:
 private:
     Ui::AboutDialog *ui;
 };
-

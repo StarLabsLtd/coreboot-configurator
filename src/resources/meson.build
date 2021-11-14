@@ -41,4 +41,3 @@ foreach size: get_option('sizes')
 		     rename: meson.project_name() + '.png',
 		     install_dir: join_paths(icon_dir, '@0@x@1@'.format(size, size), 'apps'))
 endforeach
-

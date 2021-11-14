@@ -29,4 +29,3 @@ To explain the options:
     help: **Greet the World**		<- Help text that is displayed when hovering on the
 					   option.
 ```
-
