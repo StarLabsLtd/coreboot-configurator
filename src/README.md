@@ -24,8 +24,8 @@ To explain the options:
 					   option.
     displayName: **Hi World**		<- This is the name of the option that the user
 					<- will see.
-    type: **bool**			<- Valid type are: bool (checkbox), enum (dropdown)
-					   and int (slider).
+    type: **bool**			<- Valid type are: bool (checkbox) and enum
+					<- (dropdown).
     help: **Greet the World**		<- Help text that is displayed when hovering on the
 					   option.
 ```
