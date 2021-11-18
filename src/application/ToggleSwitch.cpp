@@ -25,7 +25,6 @@ ToggleSwitch::ToggleSwitch(QWidget *parent) : QCheckBox(parent){
     setFixedWidth(50);
     setFixedHeight(width()/2);
 
-    m_svgr.setAspectRatioMode(Qt::KeepAspectRatio);
     m_toggleOnSvgContentColored = s_toggleOnSvgContent;
 }
 

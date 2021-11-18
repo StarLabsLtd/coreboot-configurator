@@ -5,7 +5,7 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <QShortcut>
-#include <QtWidgets>
+#include <QtGui>
 
 #include "AboutDialog.h"
 #include "Configuration.h"

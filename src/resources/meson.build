@@ -30,7 +30,6 @@ foreach size: get_option('sizes')
 		output: target_temp_name + '.png',
 		command: [
 			inkscape,
-			'--shell',
 			'--export-dpi=@0@'.format(dpi),
 			'--export-png=@OUTPUT@',
 			'@INPUT@',

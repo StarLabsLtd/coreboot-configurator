@@ -5,7 +5,7 @@ qt5 = import('qt5')
 qt5_dep = dependency('qt5', modules : ['Core', 'Widgets', 'Svg'])
 yamlcpp_dep = dependency('yaml-cpp', version: '>= 0.5.1', required: true)
 
-lang_cpp = qt5.compile_translations(qresource: 'lang.qrc')
+# lang_cpp = qt5.compile_translations(qresource: 'lang.qrc')
 
 generated_files = qt5.preprocess(
 	moc_headers	: ['MainWindow.h', 'AboutDialog.h', 'ToggleSwitch.h'],
@@ -27,7 +27,7 @@ executable('coreboot-configurator',
 	   'Configuration.cpp',
 	   'ToggleSwitch.cpp',
 	   'NvramToolCli.cpp',
-	   lang_cpp,
+#	   lang_cpp,
 	   generated_files,
 	   dependencies : [qt5_dep, yamlcpp_dep],
 	   install : true
