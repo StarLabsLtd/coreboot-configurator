@@ -7,6 +7,6 @@
         <file alias="categories.yaml">qrc/categories.yaml</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="starlabs-logo.png">qrc/starlabs-logo.png</file>
+        <file alias="star.svg">qrc/star.svg</file>
     </qresource>
 </RCC>
