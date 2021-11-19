@@ -16,8 +16,8 @@ static inline QByteArray readSvg(const QString& name){
     return svgFile.readAll();
 }
 
-const QByteArray ToggleSwitch::s_toggleOffSvgContent = readSvg(QStringLiteral(":/toggle/toggle-off.svg"));
-const QByteArray ToggleSwitch::s_toggleOnSvgContent = readSvg(QStringLiteral(":/toggle/toggle-on.svg"));
+QByteArray ToggleSwitch::s_toggleOffSvgContent;
+QByteArray ToggleSwitch::s_toggleOnSvgContent;
 const int ToggleSwitch::s_colorPosInToggleOn = ToggleSwitch::s_toggleOnSvgContent.indexOf("#1a73e8");
 
 ToggleSwitch::ToggleSwitch(QWidget *parent) : QCheckBox(parent){
@@ -30,12 +30,15 @@ ToggleSwitch::ToggleSwitch(QWidget *parent) : QCheckBox(parent){
 
 void ToggleSwitch::paintEvent(QPaintEvent *event){
     QPainter p(this);
+    s_toggleOffSvgContent = readSvg(QStringLiteral(":/toggle/toggle-off.svg"));
+    s_toggleOnSvgContent = readSvg(QStringLiteral(":/toggle/toggle-on.svg"));
+
 
     if(isChecked()){
         auto accent = palette().highlight().color();
         m_toggleOnSvgContentColored = m_toggleOnSvgContentColored.replace(s_colorPosInToggleOn, 7, accent.name().toLatin1());
 
-        m_svgr.load(m_toggleOnSvgContentColored);
+        m_svgr.load(s_toggleOnSvgContent);
     } else {
         m_svgr.load(s_toggleOffSvgContent);
     }
