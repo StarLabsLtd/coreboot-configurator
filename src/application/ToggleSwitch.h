@@ -19,8 +19,8 @@ public:
 private:
     QSvgRenderer m_svgr;
 
-    static QByteArray s_toggleOnSvgContent;
-    static QByteArray s_toggleOffSvgContent;
+    static const QByteArray s_toggleOnSvgContent;
+    static const QByteArray s_toggleOffSvgContent;
     static const int s_colorPosInToggleOn;
 
     QByteArray m_toggleOnSvgContentColored;
