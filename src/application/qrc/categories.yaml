@@ -75,6 +75,10 @@ devices:
     displayName: SATA Mode
     type: enum
     help: Set the mode of the SATA controller from AHCI or Compatible
+  thunderbolt:
+    displayName: Thunderbolt
+    type: bool
+    help: Enable or disable Thunderbolt functionality
 
 system:
   displayName: System
