@@ -33,11 +33,11 @@ sudo apt purge coreboot-configurator
 ## Manjaro
 ##### Install
 ```
-sudo pacman -Syu coreboot-configurator
+sudo pamac install coreboot-configurator
 ```
 ##### Uninstall
 ```
-sudo pacman -Rns coreboot-configurator
+sudo pamac remove coreboot-configurator
 ```
 
 ## Other Distributions
