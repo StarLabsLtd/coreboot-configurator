@@ -5,6 +5,7 @@ qt5 = import('qt5')
 qt5_dep = dependency('qt5', modules : ['Core', 'Widgets', 'Svg'])
 yamlcpp_dep = dependency('yaml-cpp', version: '>= 0.5.1', required: true)
 
+# TODO: Translations
 # lang_cpp = qt5.compile_translations(qresource: 'lang.qrc')
 
 generated_files = qt5.preprocess(

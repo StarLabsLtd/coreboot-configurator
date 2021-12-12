@@ -7,7 +7,7 @@ A simple GUI to change settings in coreboot's CBFS, via the nvramtool utility.
 ## Ubuntu, Linux Mint, elementary OS, Zorin OS and other derivates
 ##### Install
 ```
-sudo add-apt-repository ppa:starlabs/ppa
+sudo add-apt-repository ppa:starlabs/coreboot
 sudo apt update
 sudo apt install coreboot-configurator
 ```
@@ -16,7 +16,7 @@ sudo apt install coreboot-configurator
 sudo apt purge coreboot-configurator
 ```
 
-## Debian
+## Debian 11
 ##### Install
 ```
 echo "deb http://ppa.launchpad.net/starlabs/ppa/ubuntu focal main" | sudo tee -a /etc/apt/sources.list.d/starlabs-ubuntu-ppa-focal.list

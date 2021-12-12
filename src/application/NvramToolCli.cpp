@@ -12,69 +12,68 @@ static constexpr char s_nvramToolProg[] = "/usr/sbin/nvramtool";
 #if MOCK
 
 QMap<QString, QString> NvramToolCli::readParameters(QString *error) {
-        return QMap<QString,QString>({
-            {"boot_option","Normal"},
-            {"reboot_counter","0x0"},
-            {"debug_level","Spew"},
-            {"vtd","Enable"},
-            {"power_profile","Performance"},
-            {"wireless","Enable"},
-            {"webcam","Enable"},
-            {"microphone","Enable"},
-            {"legacy_8254_timer","Enable"},
-            {"usb_always_on","Disable"},
-            {"kbl_timeout","Never"},
-            {"fn_ctrl_swap","Enable"},
-            {"max_charge","100%"},
-            {"power_on_after_fail","Disable"},
-            {"fn_lock_state","0x2"},
-            {"trackpad_state","0x40"},
-            {"kbl_brightness","0xc4"},
-            {"kbl_state","0x22"}
-
-        });
+	return QMap<QString,QString>({
+		{"boot_option","Normal"},
+		{"reboot_counter","0x0"},
+		{"debug_level","Spew"},
+		{"vtd","Enable"},
+		{"power_profile","Performance"},
+		{"wireless","Enable"},
+		{"webcam","Enable"},
+		{"microphone","Enable"},
+		{"legacy_8254_timer","Enable"},
+		{"usb_always_on","Disable"},
+		{"kbl_timeout","Never"},
+		{"fn_ctrl_swap","Enable"},
+		{"max_charge","100%"},
+		{"power_on_after_fail","Disable"},
+		{"fn_lock_state","0x2"},
+		{"trackpad_state","0x40"},
+		{"kbl_brightness","0xc4"},
+		{"kbl_state","0x22"}
+	});
 }
 
 QStringList NvramToolCli::readOptions(const QString &parameter, QString *error){
-    return (parameter=="power_profile")?
-               QStringList{
-                   "Power Saver","Balanced","Performance"
-               } : QStringList{};
+	return (parameter=="power_profile")?
+	QStringList{
+		"Power Saver","Balanced","Performance"
+	} : QStringList{};
 }
 
 #else
 
 QMap<QString, QString> NvramToolCli::readParameters(QString *error)
 {
-    QProcess nvramtoolProcess;
-    nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-a"});
+	QProcess nvramtoolProcess;
+	nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-a"});
 
-    nvramtoolProcess.waitForFinished();
+	nvramtoolProcess.waitForFinished();
 
-    if(error) *error = nvramtoolProcess.readAllStandardError();
+	if(error) *error = nvramtoolProcess.readAllStandardError();
 
-    if(nvramtoolProcess.exitCode() != 0){
-        return {};
-    }
+	if(nvramtoolProcess.exitCode() != 0){
+		return {};
+	}
 
-    return Util::parseParameters(nvramtoolProcess);
+	return Util::parseParameters(nvramtoolProcess);
 }
 
 QStringList NvramToolCli::readOptions(const QString &parameter, QString *error)
 {
-    QStringList result;
+	QStringList result;
 
-    QProcess nvramtoolProcess;
-    nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-e", parameter});
-    nvramtoolProcess.waitForFinished();
+	QProcess nvramtoolProcess;
+	nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-e", parameter});
+	nvramtoolProcess.waitForFinished();
 
-    if(error) *error = nvramtoolProcess.readAllStandardError();
+	if(error) *error = nvramtoolProcess.readAllStandardError();
 
-    while (nvramtoolProcess.canReadLine()) {
-        result.append(nvramtoolProcess.readLine().trimmed());
-    }
+	while (nvramtoolProcess.canReadLine()) {
+		result.append(nvramtoolProcess.readLine().trimmed());
+	}
 
-    return result;
+	return result;
 }
 #endif
 
@@ -82,29 +81,29 @@ bool NvramToolCli::writeParameters(const QMap<QString, QString> &parameters, QSt
 {
 
 #if MOCK
-    QTextStream outStream(stdout);
+	QTextStream outStream(stdout);
 #else
-    QProcess nvramtoolProcess;
-    nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-i"});
-    nvramtoolProcess.waitForStarted();
-    QTextStream outStream(&nvramtoolProcess);
+	QProcess nvramtoolProcess;
+	nvramtoolProcess.start(s_sudoProg, {s_nvramToolProg, "-i"});
+	nvramtoolProcess.waitForStarted();
+	QTextStream outStream(&nvramtoolProcess);
 #endif
-    for(auto it = parameters.begin(); it != parameters.end(); ++it){
-        outStream << it.key() << " = " << it.value() << "\n";
-    }
+	for(auto it = parameters.begin(); it != parameters.end(); ++it){
+		outStream << it.key() << " = " << it.value() << "\n";
+	}
 
-    outStream.flush();
+	outStream.flush();
 #if MOCK
-    return true;
+	return true;
 #else
-    nvramtoolProcess.closeWriteChannel();
-    nvramtoolProcess.waitForFinished();
+	nvramtoolProcess.closeWriteChannel();
+	nvramtoolProcess.waitForFinished();
 
-    if(error){
-        *error = nvramtoolProcess.readAllStandardError();
-    }
+	if(error){
+		*error = nvramtoolProcess.readAllStandardError();
+	}
 
-    return nvramtoolProcess.exitCode()==0;
+	return nvramtoolProcess.exitCode()==0;
 #endif
 }
 
@@ -112,10 +111,10 @@ bool NvramToolCli::writeParameters(const QMap<QString, QString> &parameters, QSt
 
 QString NvramToolCli::version()
 {
-    QProcess nvramtoolProcess;
-    nvramtoolProcess.start(s_nvramToolProg, {"-v"});
+	QProcess nvramtoolProcess;
+	nvramtoolProcess.start(s_nvramToolProg, {"-v"});
 
-    nvramtoolProcess.waitForFinished();
+	nvramtoolProcess.waitForFinished();
 
-    return nvramtoolProcess.readAll();
+	return nvramtoolProcess.readAll();
 }

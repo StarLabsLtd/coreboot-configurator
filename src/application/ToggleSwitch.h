@@ -12,29 +12,28 @@
  * The ToggleSwitch class represents Toggle Switch widget based on QCheckBox and toggles svg with colorscheme support
  */
 class ToggleSwitch : public QCheckBox {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    explicit ToggleSwitch(QWidget* parent = nullptr);
+	explicit ToggleSwitch(QWidget* parent = nullptr);
 
 private:
-    QSvgRenderer m_svgr;
+	QSvgRenderer m_svgr;
 
-    static const QByteArray s_toggleOnSvgContent;
-    static const QByteArray s_toggleOffSvgContent;
-    static const int s_colorPosInToggleOn;
+	static const QByteArray s_toggleOnSvgContent;
+	static const QByteArray s_toggleOffSvgContent;
+	static const int s_colorPosInToggleOn;
 
-    QByteArray m_toggleOnSvgContentColored;
+	QByteArray m_toggleOnSvgContentColored;
 
-    /* QWidget interface */
+	/* QWidget interface */
 protected:
-    void paintEvent(QPaintEvent *event) override;
+	void paintEvent(QPaintEvent *event) override;
 
-    /* QAbstractButton interface */
+	/* QAbstractButton interface */
 protected:
-    bool hitButton(const QPoint &pos) const override
-    {
-        /* needs to be clickable on */
-        return rect().contains(pos);
-    }
-
+	bool hitButton(const QPoint &pos) const override
+	{
+		/* needs to be clickable on */
+		return rect().contains(pos);
+	}
 };
