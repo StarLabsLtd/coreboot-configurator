@@ -1,8 +1,10 @@
+/* SPDX-License-Identifier: GPL-2.0-only */
+
 #pragma once
 
-//Embed SVG files into code as debian packages does weird things when svgs are included as qrc
+/* Embed SVG files into code as debian packages does weird things when svgs are included as qrc */
 namespace ToggleSwitchSVG {
-static constexpr char s_toggledOnContent[] = 
+static constexpr char s_toggledOnContent[] =
     "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n"
     "<svg\n"
     "   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n"
