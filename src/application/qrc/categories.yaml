@@ -1,21 +1,21 @@
-processor:
-  displayName: Processor
-  hyper_threading:
-    displayName: Hyper-Threading
-    type: bool
-    help: Enable or disable Hyper-Threading
-  vtd:
-    displayName: Intel VT-d
-    type: bool
-    help: Enable or disable Intel VT-d (virtualisation)
-  power_profile:
-    displayName: Power Profile
-    type: enum
-    help: Select whether to maximise performance, battery life or both
-  me_state:
-    displayName: Intel Management Engine
-    type: bool
-    help: Enable or disable the Intel Management Engine
+  processor:
+    displayName: Processor
+    hyper_threading:
+      displayName: Hyper-Threading
+      type: bool
+      help: Enable or disable Hyper-Threading
+    vtd:
+      displayName: Intel VT-d
+      type: bool
+      help: Enable or disable Intel VT-d (virtualisation)
+    power_profile:
+      displayName: Power Profile
+      type: enum
+      help: Select whether to maximise performance, battery life or both
+    me_state:
+      displayName: Intel Management Engine
+      type: bool
+      help: Enable or disable the Intel Management Engine
 
   devices:
     displayName: Devices
