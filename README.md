@@ -54,7 +54,7 @@ sudo ninja -C uninstall
 ```
 
 # Advanced Mode
-Enabling advanced mode will all you to see all settings contained inside coreboot. Tread carefully :)
+Enabling advanced mode will allow you to see all settings contained inside coreboot. Tread carefully :)
 
 ## Copying or Reusing
 Included scripts are free software licensed under the terms of the [GNU General Public License, version 2](https://www.gnu.org/licenses/gpl-2.0.txt).
