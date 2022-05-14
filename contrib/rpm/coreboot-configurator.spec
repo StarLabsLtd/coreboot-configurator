@@ -12,13 +12,36 @@ BuildRequires: git
 BuildRequires: gcc
 BuildRequires: gcc-c++
 BuildRequires: meson
+BuildRequires: inkscape
+BuildRequires: yaml-cpp-devel
+%if 0%{?rhel}
 BuildRequires: ninja-build
 BuildRequires: qt5-qtbase-devel
 BuildRequires: qt5-qtsvg-devel
 BuildRequires: qt5-qtbase-gui
-BuildRequires: yaml-cpp-devel
-BuildRequires: inkscape
+%endif
+%if 0%{?fedora}
+BuildRequires: ninja-build
+BuildRequires: qt5-qtbase-devel
+BuildRequires: qt5-qtsvg-devel
+BuildRequires: qt5-qtbase-gui
+%endif
+%if 0%{?suse_version}
+BuildRequires: ninja
+BuildRequires: libqt5-qtbase-devel
+BuildRequires: libqt5-qtsvg-devel
+BuildRequires: libqt5-qtbase
+%endif
+
+%if 0%{?rhel}
 Requires: qt5-qtbase-gui
+%endif
+%if 0%{?fedora}
+Requires: qt5-qtbase-gui
+%endif
+%if 0%{?suse_version}
+Requires: libqt5-qtbase
+%endif
 
 %description
 A simple GUI to change settings in coreboot's CBFS, via the nvramtool utility.
