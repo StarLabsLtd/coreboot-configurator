@@ -41,6 +41,15 @@ sudo pamac remove coreboot-configurator
 ```
 
 ## Other Distributions
+##### Dependencies
+```
+c++ compiler (gcc)
+qt5
+yaml-cpp
+nvramtool
+meson
+```
+
 ##### Install
 ```
 git clone https://github.com/StarLabsLtd/coreboot-configurator.git
