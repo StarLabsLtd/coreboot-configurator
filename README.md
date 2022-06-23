@@ -41,6 +41,17 @@ sudo pamac install coreboot-configurator
 sudo pamac remove coreboot-configurator
 ```
 
+## Fedora (Unofficial)
+##### Install
+```
+sudo dnf copr enable adamthiede/starlabs-coreboot-config
+sudo dnf install nvramtool coreboot-configurator
+```
+##### Uninstall
+```
+sudo dnf remove nvramtool coreboot-configurator
+```
+
 ## Other Distributions
 ##### Dependencies
 ```
