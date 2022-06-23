@@ -60,7 +60,7 @@ ninja -C build install
 ```
 ##### Uninstall
 ```
-sudo ninja -C uninstall
+sudo ninja -C build uninstall
 ```
 
 # Advanced Mode
