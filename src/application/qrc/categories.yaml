@@ -47,6 +47,10 @@
       displayName: Ethernet 3
       type: bool
       help: Enable or disable the built-in Ethernet Port 3
+    fast_charge:
+      displayName: Fast Charge
+      type: bool
+      help: Enable or disable fast charging. Fast charging increases charging speeds, temperature and battery wear.
     webcam:
       displayName: Webcam
       type: bool
