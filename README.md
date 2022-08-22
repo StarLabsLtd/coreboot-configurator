@@ -20,7 +20,7 @@ sudo apt purge coreboot-configurator
 ##### Install
 ```
 cd /tmp
-wget https://github.com/StarLabsLtd/packages/raw/main/Debian/11/coreboot-configurator_9%2Bf_all.deb \
+wget https://github.com/StarLabsLtd/packages/raw/main/Debian/11/coreboot-configurator_10+f_all.deb \
 	https://github.com/StarLabsLtd/packages/raw/main/Debian/11/nvramtool_1_all.deb
 sudo dpkg -i *.deb
 sudo apt -f install
