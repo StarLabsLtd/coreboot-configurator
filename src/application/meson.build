@@ -2,7 +2,7 @@
 
 # Documentation: https://mesonbuild.com/Qt5-module.html
 qt5 = import('qt5')
-qt5_dep = dependency('qt5', modules : ['Core', 'Widgets', 'Svg'])
+qt5_dep = dependency('qt5', modules : ['Core', 'Widgets', 'Svg', 'Gui'])
 yamlcpp_dep = dependency('yaml-cpp', version: '>= 0.5.1', required: true)
 
 # TODO: Translations
