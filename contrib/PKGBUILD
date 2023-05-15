@@ -1,8 +1,8 @@
 # Maintainer: Bernhard Landauer <bernhard@manjaro.org>
 
 pkgname=coreboot-configurator
-pkgver=8
-pkgrel=2
+pkgver=11
+pkgrel=3
 pkgdesc="A graphical interface to set options on devices with coreboot firmware"
 arch=('x86_64')
 url="https://github.com/StarLabsLtd/coreboot-configurator"
