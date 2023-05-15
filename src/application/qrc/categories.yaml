@@ -83,6 +83,10 @@
       displayName: Thunderbolt
       type: bool
       help: Enable or disable Thunderbolt functionality
+    pci_hot_plug:
+      displayName: Third-Party SSD Support
+      type: bool
+      help: Slow down coreboot by enabling Hot-Plug, to allow third-party SSDs to work
 
   system:
     displayName: System
