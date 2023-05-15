@@ -110,6 +110,10 @@
       displayName: Function Lock
       type: bool
       help: Make the F-keys behave as if you are holding down the Fn key
+    fast_charge:
+      displayName: Fast Charge
+      type: bool
+      help: Charge the battery faster, at the cost of heat and mild battery wear
 
   advanced:
     displayName: Advanced
