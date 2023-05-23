@@ -7,6 +7,6 @@
     <defaults>
       <allow_active>yes</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/reboot</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/systemctl reboot</annotate>
   </action>
 </policyconfig>
